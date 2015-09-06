@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Codecourse\\Notify": "src/"
+            "Codecourse\\Notify\\": "src/"
         },
         "files": [
             "src/Codecourse/Notify/functions.php"
