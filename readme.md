@@ -1,6 +1,4 @@
-# Notify
-
-Flexible flash notifications for Laravel
+![Notify](https://s3.amazonaws.com/s3.codecourse.com/github/banners/notify.png)
 
 ## Install
 
@@ -12,13 +10,13 @@ composer require codecourse/notify
 
 Add the service provider to `config/app.php`
 
-```
+```php
 'Codecourse\Notify\NotifyServiceProvider',
 ```
 
 Optionally include the Facade in `config/app.php` if you'd like.
 
-```
+```php
 'Notify' => 'Codecourse\Notify\Facades\Notify',
 ```
 
@@ -30,13 +28,13 @@ Optionally include the Facade in `config/app.php` if you'd like.
 
 From your application, call the `flash` method with a message and type.
 
-```
+```php
 notify()->flash('Welcome back!', 'success');
 ```
 
 Within a view, you can now check if a flash message exists and output it.
 
-```
+```php
 @if (notify()->ready())
     <div class="alert-box {{ notify()->type() }}">
         {{ notify()->message() }}
@@ -49,7 +47,7 @@ Within a view, you can now check if a flash message exists and output it.
 
 You can pass additional options to the `flash` method, which are then easily accessible within your view.
 
-```
+```php
 notify()->flash('Welcome back!', 'success', [
     'timer' => 3000,
     'text' => 'It\'s really great to see you again',
@@ -58,7 +56,7 @@ notify()->flash('Welcome back!', 'success', [
 
 Then, in your view.
 
-```
+```javascript
 @if (notify()->ready())
     <script>
         swal({
