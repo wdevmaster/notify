@@ -8,7 +8,7 @@ class Notifier
 {
     /**
      * Session storage.
-     * 
+     *
      * @var Codecourse\Storage\Session
      */
     protected $session;
@@ -20,11 +20,11 @@ class Notifier
 
     /**
      * Flash a message.
-     * 
+     *
      * @param  string $message
      * @param  string $type
      * @param  array  $options
-     * 
+     *
      * @return void
      */
     public function flash($message, $type = null, array $options = [])
@@ -38,7 +38,7 @@ class Notifier
 
     /**
      * If a message is ready to be shown.
-     * 
+     *
      * @return bool
      */
     public function ready()
@@ -48,7 +48,7 @@ class Notifier
 
     /**
      * Get the stored message.
-     * 
+     *
      * @return string
      */
     public function message()
@@ -58,7 +58,7 @@ class Notifier
 
     /**
      * Get the stored type.
-     * 
+     *
      * @return string
      */
     public function type()
@@ -68,7 +68,7 @@ class Notifier
 
     /**
      * Get an additional stored options.
-     * 
+     *
      * @param  boolean $array
      * @return mixed
      */
@@ -79,12 +79,12 @@ class Notifier
 
     /**
      * Get a stored option.
-     * 
+     *
      * @param  string $key
      * @return string
      */
-    public function option($key)
+    public function option($key, $default = null)
     {
-        return array_get($this->options(true), $key, '');
+        return array_get($this->options(true), $key, $default);
     }
 }
