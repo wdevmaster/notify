@@ -11,13 +11,13 @@ composer require codecourse/notify
 Add the service provider to `config/app.php`
 
 ```php
-'Codecourse\Notify\NotifyServiceProvider',
+Codecourse\Notify\NotifyServiceProvider::class,
 ```
 
 Optionally include the Facade in `config/app.php` if you'd like.
 
 ```php
-'Notify' => 'Codecourse\Notify\Facades\Notify',
+'Notify' => Codecourse\Notify\Facades\Notify::class,
 ```
 
 > Note, there is a notify() function available, so unless you really want to use the Facade, there's no need to include it.
