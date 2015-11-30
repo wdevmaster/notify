@@ -35,6 +35,21 @@ class Notifier
             'notify.options' => json_encode($options),
         ]);
     }
+    
+    /**
+     * Get the message
+     *
+     * @param  boolean $array
+     * @return array
+     */
+    public function get($array = false)
+    {
+        return [
+            'message' => $this->message(),
+            'type' => $this->type(),
+            'options' => $this->options($array),
+        ];
+    }
 
     /**
      * If a message is ready to be shown.
