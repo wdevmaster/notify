@@ -1,5 +1,5 @@
 {
-    "name": "wdevmaster/notify",
+    "name": "wdevmaster/swal-notify",
     "description": "Flexible flash notifications for Laravel",
     "license": "MIT",
     "authors": [
